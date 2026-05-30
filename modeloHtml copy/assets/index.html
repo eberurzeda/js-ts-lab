@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Exercício de JavaScript</title>
+
+    <!-- Conecta o arquivo CSS ao HTML -->
+    <link rel="stylesheet" href="./css/style.css" />
+
+    <!--
+      Conecta o JavaScript ao HTML.
+      O atributo defer faz o navegador esperar o carregamento do HTML
+      antes de executar o código JavaScript.
+    -->
+    <script src="./js/main.js" defer></script>
+  </head>
+
+  <body>
+    <main class="container">
+      <h1>Exercício de JavaScript</h1>
+
+      <p>
+        Use esta página como modelo para praticar os conteúdos das aulas.
+      </p>
+
+      <!-- Área para inserir formulários, botões e outros elementos -->
+      <section class="exercise-area">
+  <h2>Formulário de teste</h2>
+
+  <form id="form">
+    <label for="name">Nome:</label>
+    <input id="name" type="text" placeholder="Digite seu nome" />
+
+    <label for="email">E-mail:</label>
+    <input id="email" type="email" placeholder="Digite seu e-mail" />
+
+    <label for="password">Senha:</label>
+    <input id="password" type="password" placeholder="Digite sua senha" />
+
+    <button type="submit">Enviar</button>
+  </form>
+
+  <div id="result"></div>
+</section>
+
+    </main>
+  </body>
+</html>
