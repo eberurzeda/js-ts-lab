@@ -1,50 +1,93 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tabela IMC</title>
 
-    <title>Exercício de JavaScript</title>
+    <link rel="stylesheet" href="css/style.css" />
 
-    <!-- Conecta o arquivo CSS ao HTML -->
-    <link rel="stylesheet" href="./css/style.css" />
-
-    <!--
-      Conecta o JavaScript ao HTML.
-      O atributo defer faz o navegador esperar o carregamento do HTML
-      antes de executar o código JavaScript.
-    -->
-    <script src="./js/main.js" defer></script>
+    <script src="js/main.js" defer></script>
   </head>
 
   <body>
     <main class="container">
-      <h1>Exercício de JavaScript</h1>
+      <section class="card">
+        <h1>Tabela IMC</h1>
 
-      <p>
-        Use esta página como modelo para praticar os conteúdos das aulas.
-      </p>
+        <table>
+          <thead>
+            <tr>
+              <th>IMC</th>
+              <th>Resultado</th>
+            </tr>
+          </thead>
 
-      <!-- Área para inserir formulários, botões e outros elementos -->
-      <section class="exercise-area">
-  <h2>Formulário de teste</h2>
+          <tbody>
+            <tr>
+              <td>Menos do que 18,5</td>
+              <td>Abaixo do peso</td>
+            </tr>
 
-  <form id="form">
-    <label for="name">Nome:</label>
-    <input id="name" type="text" placeholder="Digite seu nome" />
+            <tr>
+              <td>Entre 18,5 e 24,9</td>
+              <td>Peso normal</td>
+            </tr>
 
-    <label for="email">E-mail:</label>
-    <input id="email" type="email" placeholder="Digite seu e-mail" />
+            <tr>
+              <td>Entre 25 e 29,9</td>
+              <td>Sobrepeso</td>
+            </tr>
 
-    <label for="password">Senha:</label>
-    <input id="password" type="password" placeholder="Digite sua senha" />
+            <tr>
+              <td>Entre 30 e 34,9</td>
+              <td>Obesidade grau 1</td>
+            </tr>
 
-    <button type="submit">Enviar</button>
-  </form>
+            <tr>
+              <td>Entre 35 e 39,9</td>
+              <td>Obesidade grau 2</td>
+            </tr>
 
-  <div id="result"></div>
-</section>
+            <tr>
+              <td>40 ou mais</td>
+              <td>Obesidade grau 3</td>
+            </tr>
+          </tbody>
+        </table>
 
+        <h2>Calcule seu IMC</h2>
+
+        <form id="form-imc">
+          <label for="peso">Peso:</label>
+
+          <input
+            type="number"
+            id="peso"
+            name="peso"
+            min="1"
+            step="0.1"
+            placeholder="Ex.: 80"
+            required
+          />
+
+          <label for="altura">Altura:</label>
+
+          <input
+            type="number"
+            id="altura"
+            name="altura"
+            min="0.5"
+            step="0.01"
+            placeholder="Ex.: 1.80"
+            required
+          />
+
+          <button type="submit">Calcular</button>
+        </form>
+
+        <div id="resultado" class="resultado" aria-live="polite"></div>
+      </section>
     </main>
   </body>
 </html>

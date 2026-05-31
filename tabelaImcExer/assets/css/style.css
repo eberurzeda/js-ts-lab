@@ -1,54 +1,53 @@
-/* Remove margens e espaçamentos padrões do navegador */
 * {
   box-sizing: border-box;
-  margin: 0;
-  padding: 0;
 }
 
-/* Estilo geral da página */
 body {
+  margin: 0;
   min-height: 100vh;
-  padding: 40px 20px;
-  background-color: #7eacac;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 24px;
+  background: #045b66;
   font-family: Arial, Helvetica, sans-serif;
-  line-height: 1.6;
+  color: #1f1f1f;
 }
 
-/* Caixa principal */
 .container {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 30px;
-  background-color: #ffffff;
-  border-radius: 10px;
+  width: 100%;
+  max-width: 680px;
 }
 
-/* Espaçamento abaixo dos títulos */
+.card {
+  background: #ffffff;
+  padding: 28px;
+  border-radius: 12px;
+}
+
 h1,
-h2,
-p {
-  margin-bottom: 16px;
+h2 {
+  margin-top: 0;
 }
 
-/* Área reservada para os exercícios */
-.exercise-area {
-  margin-top: 30px;
-  padding: 20px;
-  border: 1px solid #dddddd;
-  border-radius: 8px;
+h2 {
+  margin-top: 28px;
 }
 
-/* Botão padrão */
-button {
-  padding: 10px 16px;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
+table {
+  width: 100%;
+  border-collapse: collapse;
 }
 
-/* Área que receberá mensagens do JavaScript */
-#result {
-  margin-top: 20px;
+th,
+td {
+  padding: 6px 0;
+  text-align: left;
+}
+
+th:last-child,
+td:last-child {
+  padding-left: 24px;
 }
 
 form {
@@ -57,8 +56,51 @@ form {
   gap: 10px;
 }
 
+label {
+  margin-top: 4px;
+}
+
+input,
+button {
+  width: 100%;
+  padding: 14px;
+  font-size: 1rem;
+}
+
 input {
-  padding: 10px;
-  border: 1px solid #cccccc;
+  border: 1px solid #b8b8b8;
+}
+
+input:focus {
+  outline: 2px solid #047280;
+  border-color: transparent;
+}
+
+button {
+  margin-top: 10px;
+  border: none;
+  background: #045b66;
+  color: #ffffff;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #034a53;
+}
+
+.resultado {
+  margin-top: 18px;
+  padding: 14px;
   border-radius: 6px;
+  background: #eef7f8;
+  display: none;
+}
+
+.resultado.visivel {
+  display: block;
+}
+
+.resultado.erro {
+  background: #ffe6e6;
 }
