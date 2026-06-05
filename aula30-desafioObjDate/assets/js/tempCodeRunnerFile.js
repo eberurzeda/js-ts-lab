@@ -1,0 +1,1 @@
+const diaSemanaTexto = diasDaSemana[data.getDay()];
